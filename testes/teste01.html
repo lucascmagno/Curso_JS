@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de números</title>
+</head>
+<body>
+    <h1>Soma de valores</h1>
+    <input type="number" name="botao1" id="botao1"> +
+    <input type="number" name="botao2" id="botao2">
+    <input type="button" value="somar" id="soma" onclick="soma()">
+    <div id="div">
+        Soma
+    </div>
+    <script>
+        function soma(){
+            var n1 = window.document.getElementsById('botao1');
+            var n2 = window.document.getElementById('botao2');
+            var div1 = window.document.getElementById('div');
+            var e1 = Number(n1.value)
+            var e2 = Number(n2.value)
+            var soma = e1+e2
+            div1.innerText = n1+n2
+        }
+    </script>
+</body>
+</html>
