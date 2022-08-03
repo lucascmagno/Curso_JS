@@ -2,6 +2,9 @@ body{
  background: rgb(70,142,236);
  font: normal 15pt Arial, Helvetica, sans-serif;
 }
+main{
+    max-width: 550px;
+}
 header{
     color: white;
     text-align: center;
@@ -10,7 +13,6 @@ section{
     background: white;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
     margin: auto;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.377);
 }
