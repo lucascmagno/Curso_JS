@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio01</title>
+    <style>
+        #botao1{
+            padding: 30px;
+        }
+        #botao2{
+            padding: 30px;
+        }
+        #botao3{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input id="botao1" type="button" value="Botão 1" onclick="clicou1()">
+    <input id="botao2" type="button" value="Botão 2" onclick="clicou2()" >
+    <input id="botao3" type="button" value="Botão 3" onclick="clicou3()" >
+    <script>
+        var btn1 = document.getElementBy('botao1')
+        var btn2 = document.getElementById('botao2')
+        var btn3 = document.getElementById('botao3')
+        function clicou1(){
+            btn1 = alert('Você clicou no 1º botão!')
+        }
+        function clicou2(){
+            btn2 = alert('Você clicou no 2º botão!')
+        }
+        function clicou3(){
+            btn3 = alert('Você clicou no 3º botão!')
+        }
+    </script>
+</body>
+</html>
