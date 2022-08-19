@@ -10,7 +10,9 @@
     <h1>Soma de valores</h1>
     <input type="number" name="botao1" id="botao1"> +
     <input type="number" name="botao2" id="botao2">
+
     <input type="button" value="somar" id="soma" onclick="soma()">
+
     <div id="div">
         Soma
     </div>
@@ -18,11 +20,15 @@
         function soma(){
             var n1 = window.document.getElementsById('botao1');
             var n2 = window.document.getElementById('botao2');
-            var div1 = window.document.getElementById('div');
-            var e1 = Number(n1.value)
-            var e2 = Number(n2.value)
-            var soma = e1+e2
-            div1.innerText = n1+n2
+
+            var btn = document.getElementById('soma')
+
+            var div = window.document.getElementById('div');
+
+            var a = Number(n1.value)
+            var b = Number(n2.value)
+
+            btn = window.alert(`${a+b}`)
         }
     </script>
 </body>
