@@ -14,9 +14,10 @@ for(let i = 0; i < num.length; i++){
     console.log(num[i])
 }
 
-let pos = num.indexOf(4)
+let n = 3
+let pos = num.indexOf(n)
 if(pos == -1){
     console.log(`O valor não foi encontrado!`)
 }else{
-    console.log(`O valor 2 está na posição ${pos}`)
+    console.log(`O valor ${n} está na posição ${pos}`)
 }
