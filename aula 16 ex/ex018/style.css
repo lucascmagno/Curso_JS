@@ -14,8 +14,17 @@ section{
     margin: auto;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.377);
 }
-button{
-    padding: 3px;
+.button{
+    padding: 8px;
+    border: 1px  inset;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.301);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1%;
+}
+.button:hover{
+    background-color: lightgrey;
 }
 #flista{
     width: 150px;
