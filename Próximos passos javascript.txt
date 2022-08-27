@@ -1,0 +1,8 @@
+		Próximos passos no javascript
+functions
+objetos
+modularização
+RegEx
+JSON
+AJAX
+NodeJS
