@@ -27,10 +27,10 @@
             var httpRequest;
             document.getElementById('ajaxButton').onclick = function(){
                 var userName = document.getElementById('ajaxTextbox').value;    
-                makeRequest('test.xml');
+                makeRequest('test.php',userName);
             };
 
-            function makeRequest(url){
+            function makeRequest(url, userName){
                 if(window.XMLHttpRequest){
                     httpRequest = new XMLHttpRequest();
                 }else if(window.ActiveXObject){
@@ -49,16 +49,16 @@
                     return false;
                 }
                 httpRequest.onreadystatechange = alertContents;
-                httpRequest.open('GET',url)
-                httpRequest.send();
+                httpRequest.open('POST',url);
+                httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                httpRequest.send('userName='+encodeURIComponent(userName));
             }
 
                 function alertContents(){
                     if (httpRequest.readyState === 4) {
                         if(httpRequest.status === 200){
-                            var xmldoc = httpRequest.responseXML;
-                            var root_node = xmldoc.getElementByTagName('root').item(0);
-                            alert(root_node.firstChild.data);
+                            var response = JSON.parse(httpRequest.responseText);
+                            alert(response.computedString);
                         }else{
                             alert('Houve um problema com o pedido(Request).');
                         }
